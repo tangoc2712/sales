@@ -7,8 +7,8 @@ _Using DRF, JWT Auth, Django, Postgres_
 1. [Setup](#set-up)
 1. [Models](#create-models)
 1. [Add authen](#add-authentication)
-1. [API: GET, POST](#api-get-post)
-1. [API: DELETE, PUT](#api-delete-put)
+1. [API: GET, POST, DELETE, PUT](#api-get-post)
+
 1. [Unit-Testing](#unit-testing)
 1. [Front-end](#front-end)
 
@@ -57,7 +57,7 @@ curl \
   http://127.0.0.1:8000/api/token/
 ```
 
-You'll recieve
+You'll recieve response look like this
 
 ```bash
 HTTP 200 OK
@@ -70,9 +70,12 @@ Vary: Accept
 }
 ```
 
-## API: GET, POST
+## API: GET, POST, DELETE, PUT
 
-## API: DELETE, PUT
+1. Create [serializers.py](./crud/serializers.py) file to serialized Order Model
+1. Next create api_view in views.py include function-views: orders and orders
+1. function [save_order()](./crud/views.py#L80-L133) has to validate some fields as date, quantity, price, item
+1. Next, routing for views
 
 ## Unit-testing
 
