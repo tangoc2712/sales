@@ -77,7 +77,18 @@ Vary: Accept
 1. function [save_order()](./crud/views.py#L80-L133) has to validate some fields as date, quantity, price, item
 1. Next, routing for views
 
-## Unit-testing
+## [Unit-testing](./crud/tests.py)
+
+We have 6 test case:
+
+-   add order without token
+-   add order with token
+-   add order wrong data (check save_order() function)
+-   add order with caculate amount
+-   get order
+-   put order then delete
+
+We also test with Postman or curl command, ...
 
 ## Front-end
 
